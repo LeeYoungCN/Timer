@@ -13,9 +13,11 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+            _logger.Info($"MainForm Dispose({disposing}).");
             if (disposing && (components != null))
             {
                 components.Dispose();
+                _logger.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -53,6 +55,7 @@
             TimeLabel.TabIndex = 1;
             TimeLabel.Text = "00:00:00";
             TimeLabel.TextAlign = ContentAlignment.MiddleCenter;
+            TimeLabel.Click += TimeLabel_Click;
             // 
             // UpdateTimer
             // 

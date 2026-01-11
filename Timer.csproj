@@ -8,4 +8,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="Utils">
+      <HintPath>lib\Utils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Utils">
+      <HintPath>..\logging_and_json\Utils\Utils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
